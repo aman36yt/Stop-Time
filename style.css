@@ -1,0 +1,77 @@
+html {
+  --s: 20px; /* control the size*/
+  --c1: #c7956d;
+  --c2: #5e4352;
+  
+  --c:#0000 46.46%,var(--c1) 0 53.53%,#0000 0;
+  --d:calc(10*var(--s)) calc(10*var(--s));
+  --g:/var(--d) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
+  background:
+    conic-gradient(at 40% 40%,#0000 75%,var(--c2) 0) 
+     calc(9*var(--s)) calc(9*var(--s))/
+     calc(5*var(--s)) calc(5*var(--s)),
+    calc(8*var(--s)) calc(8*var(--s)) var(--g),
+    calc(3*var(--s)) calc(3*var(--s)) var(--g),
+    linear-gradient( 45deg,var(--c)) 0 0/var(--d),
+    linear-gradient(-45deg,var(--c)) 0 0/var(--d) var(--c2);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    
+}
+.container{
+    display: flex;
+    width: 400px;
+    height:100px;
+    font-size:30px;
+    justify-content:space-around;
+    /* border: 2px solid black; */
+    position: relative;
+}
+.sec::before{
+    content: "Sec";
+    position: relative;
+    bottom:-35px;
+    right:-40px;
+}
+.min::before{
+    content: "MIN";
+    position: relative;
+    bottom:-35px;
+    right:-40px;
+}
+.hour::before{
+    content: "Hrs";
+    position: relative;
+    bottom:-35px;
+    right:-40px;
+}
+.btn-con{
+    display: flex;
+    width: 400px;
+    /* border: 2px solid black; */
+    justify-content:space-around;
+    position: relative;
+    left:25px;
+}
+.b{
+    font-size: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight:700;
+    background-color:plum;
+    border-radius:10px;
+    padding:8px;
+    width:90px;
+    box-shadow: 2px 4px 10px black;
+}
+.b:active{
+    box-shadow: 1px 6px 10px black;
+    font-size: 18px;
+}
